@@ -3,13 +3,16 @@
     <head>
         <meta charset="utf-8">
         <title>Rádio Charrua FM - 87.7</title>
+        <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="normalize.css">
         <style type="text/css">
             .clear{clear:both}
-            #wrap{width: 100%; text-align: center; padding: 30px 0px; border-top: 5px #00446b solid; margin-top: 2px; border-bottom: 1px #efefef solid;}
+            
+            *{font-family: "Yanone Kaffeesatz", sans-serif !important;}
+            #wrap{width: 100%; text-align: center; padding: 30px 0px; border-top: 8px #00446b solid; margin-top: 2px; border-bottom: 1px #ccc solid;}
             #content{width: 90%; text-align: center; display: block; margin: 0px auto;}
             
-            h1{font: 3em Arial; color: #00446b; font-weight: bold;}
+            h1{font: 3em Arial; color: #00446b; font-weight: bold; text-shadow: -2px 2px 0px #dadada;}
             h2{font: 1.6em Arial; color: #999;}
             
             #update-browser{text-align: center; margin-left: -32px;}
@@ -52,7 +55,7 @@
         <script src="modernizr.js"></script>
         <script>
             $(document).ready(function(){
-                if(Modernizr.audio.mp3){
+                if(!Modernizr.audio.mp3){
                     $("#audio-true").show();
                 }else{
                     $("#audio-false").show();
