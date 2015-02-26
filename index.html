@@ -4,7 +4,12 @@
         <meta charset="utf-8">
         <title>Rádio Charrua FM - 87.7</title>
         <link rel="stylesheet" href="normalize.css">
-        <!--<script src="script.js"></script>-->
+        <script src="modernizr.js"></script>
+        <script>
+            if(Modernizr.audio.mp3){
+                alert("Suporta MP3");
+            }
+        </script>
     </head>
     
     <body>
