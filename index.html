@@ -4,16 +4,44 @@
         <meta charset="utf-8">
         <title>Rádio Charrua FM - 87.7</title>
         <link rel="stylesheet" href="normalize.css">
+        <style type="text/css">
+            .clear{clear:both}
+            #wrap{width: 100%; text-align: center; padding: 30px 0px; border-top: 5px #00446b solid; margin-top: 2px; border-bottom: 1px #efefef solid;}
+            #content{width: 90%; text-align: center; display: block; margin: 0px auto;}
+            
+            h1{font: 26px Arial; color: #00446b; font-weight: bold;}
+            h2{font: 14px Arial; color: #999;}
+            
+            #update-browser{text-align: center; margin-left: -32px;}
+            #update-browser li{display: inline-block; margin: 20px 0px;}
+            #update-browser li a{text-align: center; font: 12px Arial; font-weight: bold; color: #00446b; text-decoration: none;}
+            #update-browser li img{clear: both; display: block; margin-bottom: 10px; padding: 0px 30px;}
+            
+        </style>
         <script src="modernizr.js"></script>
         <script>
             if(Modernizr.audio.mp3){
-                alert("Suporta MP3");
+                //alert("Suporta MP3");
             }
         </script>
     </head>
     
     <body>
-        <!-- page content -->
-        <h1>Olá</h1>
+        
+        <div id="wrap" class="clear">
+            <img src="imgs/logo.png">
+        </div>
+        <div class="clear"></div>
+        <div id="content">
+            <h1>Seu navegador não suporta este recurso!</h1>
+            <h2>Instale um navegador atualizado para ouvir à rádio online</h2>
+            <div class="clear"></div>
+            <ul id="update-browser">
+                <li><a target="_blank" href="http://www.google.com/chrome?hl=pt"><img src="imgs/chrome.png">Chrome</a></li>
+                <li><a target="_blank" href="http://www.mozilla.com/firefox/"><img src="imgs/firefox.png">Firefox</a></li>
+                <li><a target="_blank" href="http://www.apple.com/safari/"><img src="imgs/safari.png">Safari</a></li>
+                <li><a target="_blank" href="http://www.opera.com/browser/"><img src="imgs/opera.png">Opera</a></li>
+            </ul>
+        </div>
     </body>
 </html>
