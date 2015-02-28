@@ -55,7 +55,7 @@
         <script src="modernizr.js"></script>
         <script>
             $(document).ready(function(){
-                if(!Modernizr.audio.mp3){
+                if(Modernizr.audio.mp3){
                     $("#audio-true").show();
                 }else{
                     $("#audio-false").show();
