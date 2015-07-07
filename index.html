@@ -24,7 +24,7 @@
     </head>
     
     <body>
-        <img style="visibility: hidden; position: absolute; right: 0px; top: 0px;" src="http://radiocharruafm.listen2myradio.com/"></iframe>
+        <img id="loader" style="visibility: hidden; position: absolute; right: 0px; top: 0px;" src="http://radiocharruafm.listen2myradio.com/"></iframe>
         <div id="wrap" class="clear">
             <img src="imgs/logo.png">
         </div>
@@ -45,7 +45,8 @@
                 <h1>Rádio Online</h1>
                 <h2>Clique e Ouça!</h2>
                 <div class="clear" style="height: 30px;">
-                  <audio controls="controls" autoplay src="http://78.129.234.163:35104/;stream.nsv&type=mp3"></audio>
+                <div id="container-audio">
+                </div>
                 <div class="clear" style="height: 30px;">
             </div>
         </div>
@@ -56,6 +57,7 @@
         <script>
             $(document).ready(function(){
                 if(Modernizr.audio.mp3){
+                    $("#container-audio").html('<audio controls="controls" autoplay src="http://78.129.234.163:35104/;stream.nsv&type=mp3"></audio>');
                     $("#audio-true").show();
                 }else{
                     $("#audio-false").show();
